@@ -8,14 +8,7 @@ int DelimiterStudy() {
     scanf("%d, %d, %d", &var_1, &var_2, &var_3);
     printf("키보드로 입력한 정수값 3개는  %d, %d, %d", var_1, var_2, var_3);
 
-    maximum = var_1;
-    if (maximum > var_2) {
-        maximum = var_2;
-    }
-
-    if (maximum > var_3) {
-        maximum = var_3;
-    }
+    maximum = var_1 > var_2 ? var_1 : (var_2 > var_3) ? var_2 : var_3;
 
     printf("그 중에서 최대값은 %d", maximum);
 
@@ -28,7 +21,7 @@ int PointerStudy() {
     scanf("%d", &input_var);
 
 
-    printf("키보드로 입력한 값이 저장된 주소 (16진수 표기) : %p\n", input_var_pointer);
+    printf("키보드로 입력한 값이 저장된 주소 (16진수 표기) : %x\n", input_var_pointer);
     printf("포인터 변수 *input_var_pointer에 저장된 값 (10진수 표기) : %d", *input_var_pointer);
 
     return 0;
