@@ -6,6 +6,6 @@
 #define DEBUG_TEST_BAEKJOONASSIGNMENT_H
 
 int BaekjoonFindMaxAndMin(void);
-
+int BaekjoonCountAmount(void);
 
 #endif //DEBUG_TEST_BAEKJOONASSIGNMENT_H
