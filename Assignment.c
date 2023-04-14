@@ -14,6 +14,7 @@ int DelimiterStudy() {
 
     return 0;
 }
+
 int PointerStudy() {
     int input_var;
     int* input_var_pointer = &input_var;
@@ -26,6 +27,7 @@ int PointerStudy() {
 
     return 0;
 }
+
 int DoublePointer() {
     int var_f, var_s;
     int* var_f_pointer = &var_f;
@@ -40,6 +42,7 @@ int DoublePointer() {
 
     return 0;
 }
+
 int CharAsciiFinder() {
     char input_character;
     int input_char_ascii;
@@ -51,12 +54,15 @@ int CharAsciiFinder() {
         printf("%c는 \"알파벳 대문자\"입니다.", input_character);
     } else if (97 <= input_char_ascii && input_char_ascii <= 122) {
         printf("%c는 \"알파벳 소문자\"입니다.", input_character);
+    } else if (48 <= input_char_ascii && input_char_ascii <= 57) {
+        printf("%c는 \"숫자\"입니다.", input_character);
     } else {
         printf("%c는 \"기타 문자\"입니다.", input_character);
     }
 
     return 0;
 }
+
 int FindMaxAndMin() {
     int user_input_array[10];
     int user_input_minimum = 2147483647; //바로 비교를 위해 int형 최대값을 기본값으로 지정
@@ -77,6 +83,14 @@ int FindMaxAndMin() {
 
     printf("최소값은 %d입니다.\n", user_input_minimum);
     printf("최대값은 %d입니다.\n", user_input_maximum);
+
+    return 0;
+}
+
+int Review() {
+    int var_1 = 0, var_2 = 1, var_3 = 2;
+    // <변수> = <조건식> ? <참값 경우> : <거짓일 경우>
+    // <변수> = var_1 > var_2 ? var_1 : (var_2 > var_3 ? var_2 : var_3)
 
     return 0;
 }
