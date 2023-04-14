@@ -43,3 +43,27 @@ int BaekjoonCountAmount() {
 
     return 0;
 }
+
+int BaekjoonCalcAverage() {
+    //백준 1546번 문제 평균
+    int input_subject_amount;
+    double subject_point_average;
+    double subject_total_point = 0;
+    int subject_point_temp = 0;
+    int maximum_subject_point = -1; //비교를 위해 입력값의 최소값인 0보다 작은 -1을 초기값으로 지정
+
+    scanf("%d", &input_subject_amount);
+    for (int idx = 0; idx < input_subject_amount; idx++) {
+        scanf("%d", &subject_point_temp);
+        subject_total_point += subject_point_temp;
+        if (subject_point_temp > maximum_subject_point) {
+            maximum_subject_point = subject_point_temp;
+        }
+    }
+
+    subject_point_average = (subject_total_point / (input_subject_amount * maximum_subject_point)) * 100;
+    printf("%.3lf", subject_point_average);
+
+
+    return 0;
+}

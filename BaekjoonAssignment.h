@@ -7,5 +7,6 @@
 
 int BaekjoonFindMaxAndMin(void);
 int BaekjoonCountAmount(void);
+int BaekjoonCalcAverage(void);
 
 #endif //DEBUG_TEST_BAEKJOONASSIGNMENT_H
