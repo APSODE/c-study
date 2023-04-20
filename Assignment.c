@@ -67,6 +67,7 @@ int FindMaxAndMin() {
     int user_input_array[10];
     int user_input_minimum = 2147483647; //바로 비교를 위해 int형 최대값을 기본값으로 지정
     int user_input_maximum = -2147483648; //바로 비교를 위해 int형 최대값을 기본값으로 지정
+
     printf("정수 10개를 10번에 걸쳐서 입력해주세요.\n");
     for (int idx = 0; idx < 10; idx++) {
         printf("정수를 입력하세요. : ");
@@ -83,6 +84,29 @@ int FindMaxAndMin() {
 
     printf("최소값은 %d입니다.\n", user_input_minimum);
     printf("최대값은 %d입니다.\n", user_input_maximum);
+
+    return 0;
+}
+
+int GeneticSequencing() {
+    char input_sequence[10];
+
+    for (int idx = 0; idx < 10; idx++) {
+        scanf("%c", &input_sequence[idx]);
+    }
+
+    for (int idx = 0; idx < 10; idx++) {
+        char genetic_sequence = input_sequence[idx];
+        if (genetic_sequence == 'A' || genetic_sequence == 'a') {
+            printf("T");
+        } else if (genetic_sequence == 'T' || genetic_sequence == 't') {
+            printf("A");
+        } else if (genetic_sequence == 'G' || genetic_sequence == 'g') {
+            printf("C");
+        } else if (genetic_sequence == 'C' || genetic_sequence == 'c') {
+            printf("G");
+        }
+    }
 
     return 0;
 }
