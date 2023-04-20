@@ -67,3 +67,19 @@ int BaekjoonCalcAverage() {
 
     return 0;
 }
+
+int BaekjoonFindLagerThenX() {
+    int N, X;
+
+    scanf("%d %d", &N, &X);
+    int A[N];
+    for (int idx = 0; idx < N; idx++) {
+        scanf("%d", &A[idx]);
+    }
+    for (int idx = 0; idx < N; idx++) {
+        if (A[idx] < X) {
+            printf("%d ", A[idx]);
+        }
+    }
+    return 0;
+}
