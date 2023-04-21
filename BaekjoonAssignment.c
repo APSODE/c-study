@@ -85,21 +85,24 @@ int BaekjoonFindLagerThenX() {
 }
 
 int NotSubmit() {
-
     // 입력값 : 28개
     // 입력값 1개에 대해서 이 값이 1번 ~ 30번사이의 번호 인지를 확인 -> 중복값 없음
     // 입력값 배열 사이즈 28
     // 원소 하나가 1번 ~ 30번호 확인할꺼임
 
+    // 0 ~ 29 인덱스
     int student[30] = {0}; // 30칸의 배열을 모두 0으로 초기화
 
+    // 입력값의 갯수가 28개 -> 반복문 루프르 28번 돌려야함
+    // 입력값의 범위 -> 1 ~ 30 -> 0 ~ 29
+    // 1 2 3 5 -> {1, 2, 3, 5, 0 ~}
     for(int idx=0; idx<28; idx++){
         // 과제를 제출한 사람의 번호
         int temp;
-
+        // scanf("%d", &student[idx]); --> 입력 순서대로
         // <과제를 제출한 사람의 번호> - 1은 학생 배열의 인덱스값과 동일
         //ex) 28번 -> 28번째 배열 -> 28 - 1 = 27 -> 배열의 28번째 인덱스 번호
-        scanf("%d", &temp);
+        scanf("%d", &temp); // --> 1 2 3 5 -> {1, 2, 3, 0, 5, ~ 0}
         // 위의 방법을 구현하면 student[temp - 1] = temp;를 진행하면 순서대로 배열에 번호를 배치가 가능
         student[temp - 1] = temp;
     }
@@ -117,6 +120,7 @@ int NotSubmit() {
 }
 
 int NotSubmit_Another() {
+    // n
     int student[30] = {0};
 
     for (int student_idx = 0; student_idx < 28; student_idx++) {
@@ -125,6 +129,7 @@ int NotSubmit_Another() {
         student[temp - 1] = temp;
     }
 
+    // O(n^2)
     for (int student_idx = 0; student_idx < 30; student_idx++) {
         int check = 0; // 1 ~ 30번 중에 일치하는 값이 있는지 확인하는 변수
 
