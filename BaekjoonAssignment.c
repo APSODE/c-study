@@ -153,3 +153,102 @@ int NotSubmit_Another() {
 
     return 0;
 }
+
+int FiveStars() {
+    int line_amount;
+    int star_count = 1;
+    scanf("%d", &line_amount);
+
+    for (int line_num = 1; line_num <= line_amount; line_num++) {
+        for (int blank = 0; blank < line_amount - line_num; blank++) {
+            printf(" ");
+        }
+        for (int star = 0; star < star_count; star++) {
+            printf("*");
+        }
+        star_count += 2;
+        printf("\n");
+    }
+
+    return 0;
+}
+
+int SixStars() {
+    int line_amount;
+    scanf("%d", &line_amount);
+    int star_count = 2 * line_amount - 1;
+
+    for (int line_num = line_amount; line_num > 0; line_num--) {
+        for (int blank = 0; blank < line_amount - line_num; blank++) {
+            printf(" ");
+        }
+        for (int star = 0; star < star_count; star++) {
+            printf("*");
+        }
+        star_count -= 2;
+        printf("\n");
+    }
+    return 0;
+}
+
+int DiamondStars(){
+    int line_amount, star_count = 1;
+    scanf("%d", &line_amount);
+
+    for (int line_num = 1; line_num <= line_amount; line_num++) {
+        for (int blank = 0; blank < line_amount - line_num; blank++) {
+            printf(" ");
+        }
+        for (int star = 0; star < star_count; star++) {
+            printf("*");
+        }
+        star_count += 2;
+        printf("\n");
+    }
+
+    star_count -= 4;
+
+    for (int line_num = line_amount - 1; line_num > 0; line_num--) {
+        for (int blank = 0; blank < line_amount - line_num; blank++) {
+            printf(" ");
+        }
+        for (int star = 0; star < star_count; star++) {
+            printf("*");
+        }
+        star_count -= 2;
+        printf("\n");
+    }
+
+    return 0;
+}
+
+int ReverseDiamondStars(){
+    int line_amount;
+    scanf("%d", &line_amount);
+
+    int star_count = 2 * line_amount - 1;
+
+    for (int line_num = line_amount - 1; line_num > 0; line_num--) {
+        for (int blank = 1; blank < line_amount - line_num; blank++) {
+            printf(" ");
+        }
+        for (int star = 0; star < star_count; star++) {
+            printf("*");
+        }
+        star_count -= 2;
+        printf("\n");
+    }
+
+    for (int line_num = 1; line_num <= line_amount; line_num++) {
+        for (int blank = 0; blank < line_amount - line_num; blank++) {
+            printf(" ");
+        }
+        for (int star = 0; star < star_count; star++) {
+            printf("*");
+        }
+        star_count += 2;
+        printf("\n");
+    }
+
+    return 0;
+}
