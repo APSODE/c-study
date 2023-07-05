@@ -15,5 +15,11 @@ int FiveStars(void);
 int SixStars(void);
 int DiamondStars(void);
 int ReverseDiamondStars(void);
+int ChangeBall(void);
+int CalcMod(void);
+int WordStudy(void);
+int PalindromeNumber(void);
+int OrangeAteOrenge(void);
+
 
 #endif //DEBUG_TEST_BAEKJOONASSIGNMENT_H
